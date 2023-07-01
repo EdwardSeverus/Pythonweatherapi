@@ -1,0 +1,37 @@
+Python Weather API Documentation
+
+This Python module provides a simple and straightforward way to retrieve weather data for a specific city using the OpenWeatherMap API. 
+
+The module utilizes the requests library for making HTTP requests and includes proper error handling to ensure reliable data retrieval and handling of potential errors during the API request.
+
+
+** Make sure to replace "your_api_key" with your actual API key from OpenWeatherMap **
+
+
+
+Function Details
+
+get_weather(city, api_key)
+
+This function retrieves weather data for a specific city using the OpenWeatherMap API.
+
+Parameterscity (str): The name of the city for which to retrieve weather data.api_key (str): Your API key from OpenWeatherMap.
+
+Returnsdict or None: The weather data as a dictionary if retrieval is successful, None otherwise.
+
+Exceptionsrequests.exceptions.HTTPError: Raised if the API request returns an HTTP error status code.
+
+requests.exceptions.RequestException: Raised for other request-related errors.
+
+NotesThe function retrieves weather data in metric units by default.
+
+You can modify it to retrieve data in imperial units by changing the "units" parameter to "imperial".
+
+Error handling is implemented to catch and handle potential exceptions during the API request. 
+
+If an error occurs, appropriate error messages are displayed.
+
+The API response data is returned as a dictionary, allowing you to access specific weather information such as temperature, humidity, etc., for further processing.
+
+That concludes the documentation for the Python weather API module that uses the requests library. 
+Use this module to easily retrieve weather data for any city using the OpenWeatherMap API with proper authentication and error handling.
